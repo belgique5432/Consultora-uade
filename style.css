@@ -40,6 +40,10 @@ header {
     font-weight: bold;
 }
 
+.navbar ul a:hover {
+    color: var(--accent);
+}
+
 main {
     display: flex;
     justify-content: center;
@@ -304,6 +308,16 @@ button {
     font-weight: bolder;
 }
 
+.navbar-resto ul li a:hover {
+    color: #3498db;
+}
+
+.navbar-resto ul li a.activo {
+    color: #3498db; /* Puede ser el mismo color del hover */
+    border-bottom: 3px solid #3498db; /* Un subrayado sutil inferior queda muy profesional */
+    padding-bottom: 5px; /* Le da un poco de aire al borde para que no pegue con el texto */
+}
+
 .nosotros-section {
     min-height: 700px;
     display: flex;
@@ -452,13 +466,14 @@ button {
     display: grid;
     grid-template-columns: 300px 300px;
     gap: 50px 200px;
+
 }
 
 .card-contact  {
     border: 1px solid gray;
     border-radius: 5px;
     padding: 7%;
-    max-width: fit-content;
+    min-width: 400px;
 
 }
 
@@ -475,9 +490,11 @@ button {
 
 .contact-sec {
     min-height: 700px;
-    place-content: center;
-    place-items: center;
     gap: 100px;
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
 }
 
 .card-sup {
@@ -488,10 +505,195 @@ button {
 }
 
 .contact-sec h2 {
-    margin-bottom: 5%;
+
     position: relative;
     justify-content: flex-start;
     right: 12%;
     color: #003580;
     font-size: 32px;
+}
+
+
+@media screen and (max-width: 576px) {
+    main {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        max-width: 576px;
+    }
+
+    .main-cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+  .sub-title {
+    flex-direction: column;
+    padding: 10%;
+  }
+  
+  .cards-business {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .reason-sect {
+    padding: 10%;
+  }
+
+  .best-section {
+    padding: 10%;
+    flex-direction: column;
+  }
+
+  /* nosotros */
+    .nosotros-section {
+        flex-direction: column;
+        padding: 10%;
+    }
+
+    .Nosotros-sec-main {
+        margin-left: 0;
+        padding: 10%;
+    }
+
+    .business-img {
+        width: 100%;
+    }
+
+    .galery {
+        grid-template-columns: 1fr;
+        margin: 0;
+        justify-items: center;
+    }
+
+    .galery-text {
+        width: 100%;
+        text-align: center;
+        margin-top: 5%;
+    }
+
+    .estrategia h3 {
+        position: relative;
+        right: 0;
+        text-align: center;
+        padding: 5%;
+    }
+
+    .cards-div {
+        flex-direction: column;
+        align-items: center;
+        padding: 10%;
+    }
+
+    .graphic-section-div {
+        flex-direction: column;
+        align-items: center;
+        padding: 10%;
+        gap: 50px;
+    }
+
+    .contact-cards {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        padding: 10%;
+    }
+
+    .card-contact {
+        width: 100%;
+    }
+
+    .contact-sec h2 {
+        position: relative;
+        right: 0;
+        text-align: center;
+        padding: 5%;
+    }
+
+    .contact-sec {
+        padding: 10%;
+        gap: 0px;
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 1024px) {
+    main {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        max-width: 1024px;
+    }
+
+    .cards-business {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .best-section {
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .Nosotros-sec-main {
+        margin-left: 0;
+        padding: 10%;
+    }
+
+    .business-img {
+        width: 100%;
+    }
+
+    .galery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;;
+    }
+
+    .galery-text {
+        width: 100%;
+        text-align: center;
+        margin-top: 5%;
+    }
+
+    .nosotros-section {
+        padding: 10%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .estrategia h3 {
+        position: relative;
+        right: 0;
+        text-align: center;
+        padding: 5%;
+    }
+
+    .contact-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        width: fit-content;
+        padding: 10%;
+    }
+
+    .card-contact {
+        width: 100%;
+    }
+
+    .contact-sec h2 {
+        position: relative;
+        right: 0;
+        text-align: center;
+        padding: 5%;
+    }
+
+    .contact-sec {
+        padding: 10%;
+        gap: 0px;
+    }
 }
