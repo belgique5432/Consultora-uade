@@ -44,7 +44,7 @@ header {
     color: var(--accent);
 }
 
-main {
+main.home-main {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -515,7 +515,7 @@ button {
 
 
 @media screen and (max-width: 576px) {
-    main {
+    main.home-main {
         display: flex;
         justify-content: center;
         text-align: center;
@@ -619,7 +619,7 @@ button {
 }
 
 @media screen and (min-width: 577px) and (max-width: 1024px) {
-    main {
+    main.home-main {
         display: flex;
         justify-content: center;
         text-align: center;
